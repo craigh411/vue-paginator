@@ -4,15 +4,15 @@ export default {
             type: Number
         },
         startPage: {
-          default: 1
+            default: 1
         },
         size: {
             default: 5
         }
     },
-    created(){
-       this.page = this.startPage;
-       this.changePage()
+    created() {
+        this.page = this.startPage;
+        this.changePage()
     },
     methods: {
         prev: function() {
@@ -37,9 +37,8 @@ export default {
         changePage: function() {
             var middle = Math.ceil(this.size / 2);
             var start = (this.page - middle > 0) ? (this.page - middle) + 1 : 1;
-            if (start + middle < this.pages) {
-                this.start = start;
-            }
+            this.start = ((start + this.size) > this.pages) ? (this.pages - this.size) + 1 : start;
+
             this.$emit('page-change', this.page);
         }
     },
