@@ -1,0 +1,50 @@
+{
+    "name": "vue-paginator",
+    "version": "1.0.0",
+    "description": "Paginator component for vue.js 2",
+    "main": "index.js",
+    "scripts": {
+        "test": "gulp test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/craigh411/vue-paginator.git"
+    },
+    "keywords": [
+        "vue2",
+        "paginator",
+        "component"
+    ],
+    "author": "Craig Humphreys",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/craigh411/vue-paginator/issues"
+    },
+    "homepage": "https://github.com/craigh411/vue-paginator#readme",
+    "devDependencies": {
+        "babel-core": "^6.21.0",
+        "babel-preset-es2015": "^6.18.0",
+        "babelify": "^7.3.0",
+        "browserify": "^13.1.1",
+        "gulp": "^3.9.0",
+        "gulp-uglify": "^2.0.0",
+        "jasmine": "^2.5.3",
+        "karma": "^1.4.0",
+        "karma-browserify": "^5.1.0",
+        "karma-chrome-launcher": "^2.0.0",
+        "karma-jasmine": "^1.1.0",
+        "karma-phantomjs-launcher": "^1.0.2",
+        "karma-spec-reporter": "0.0.26",
+        "vinyl-buffer": "^1.0.0",
+        "vinyl-source-stream": "^1.1.0",
+        "vue": "^2.1.8",
+        "vueify": "^9.4.0",
+        "watchify": "^3.8.0"
+    },
+    "browserify": {
+        "transform": [
+            "babelify",
+            "vueify"
+        ]
+    }
+}
