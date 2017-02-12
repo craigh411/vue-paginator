@@ -9,6 +9,12 @@ A decoupled pagination component to correctly handle pagination events.
 - A paginator for [semantic-ui](http://semantic-ui.com).
 - No reliance on jQuery.
 
+###Examples:
+
+- Native: https://jsfiddle.net/64bo4582/
+- Bootstrap: https://jsfiddle.net/dg0vLswo/
+- Semantic-UI: https://jsfiddle.net/gx06f1t9/
+- Editable: https://jsfiddle.net/d0bn62n3/
 
 ### About
 
