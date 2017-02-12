@@ -2,13 +2,14 @@
     <div>
         <h2>Page {{page}}</h2>
 
-        <paginator :pages="10" :select-page="page" @page-change="setPage"></paginator>
+        <paginator :pages="1038" :select-page="page" @page-change="setPage"></paginator>
     </div>
 
 </template>
 
 <script type="text/javascript">
-import {SemanticPaginator as Paginator} from '../../src/index'
+
+import {EditablePaginator as Paginator} from '../../src/index'
 
 export default {
     components: {
@@ -21,7 +22,7 @@ export default {
     },
     data() {
         return {
-            page: 3
+            page: 1
         }
     }
 }

@@ -2,13 +2,14 @@
     <div>
         <h2>Page {{page}}</h2>
 
-        <paginator :pages="10" :start-page="page" @page-change="setPage"></paginator>
+        <paginator :pages="10" :select-page="page" @page-change="setPage"></paginator>
     </div>
 
 </template>
 
 <script type="text/javascript">
-import Paginator from '../../src/BootstrapPaginator.vue'
+import {BootstrapPaginator as Paginator} from '../../src/index'
+
 export default {
     components: {
         Paginator

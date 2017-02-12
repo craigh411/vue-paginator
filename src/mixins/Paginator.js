@@ -3,7 +3,7 @@ export default {
         pages: {
             type: Number
         },
-        startPage: {
+        selectPage: {
             default: 1
         },
         size: {
@@ -11,18 +11,18 @@ export default {
         }
     },
     created() {
-        this.page = this.startPage;
+        this.page = this.selectPage;
         this.changePage()
     },
     methods: {
         prev: function() {
-            if (this.page - 1 > 0) {
+            if (parseInt(this.page) - 1 > 0) {
                 this.page -= 1;
                 this.changePage();
             }
         },
         next: function() {
-            if (this.page + 1 <= this.pages) {
+            if (this.page +1 <= this.pages) {
                 this.page += 1;
                 this.changePage();
             }
@@ -41,6 +41,12 @@ export default {
 
             this.$emit('page-change', this.page);
         }
+    },
+    watch: {
+       selectPage(page){
+          this.page = page;
+          this.changePage();
+       }
     },
     data() {
         return {

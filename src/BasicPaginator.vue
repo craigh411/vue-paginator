@@ -1,4 +1,4 @@
-<style scoped>
+<style>
 .paginator {
     display: inline-block;
     border: 1px solid #ececec;
@@ -39,7 +39,7 @@
 </style>
 
 <template>
-    <div class="paginator">
+    <div :class="'paginator'">
         <div class="item" @click="prev" :class="{'disabled' : page === 1}">&laquo;</div>
         <div class="item" v-for="n in size" @click="setPage(pageNum(n))" :class="{'active' : page == pageNum(n)}">{{ pageNum(n) }}</div>
         <div class="item" @click="next" :class="{'disabled' : (page == pages)}">&raquo;</div>
