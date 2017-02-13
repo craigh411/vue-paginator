@@ -15,7 +15,7 @@
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
-            <li v-for="n in size" @click="setPage(pageNum(n))" :class="{'active' : page == pageNum(n)}"><a>{{ pageNum(n) }}</a></li>
+            <li v-for="n in paginatorSize" @click="setPage(pageNum(n))" :class="{'active' : page == pageNum(n)}"><a>{{ pageNum(n) }}</a></li>
             <li @click="next" :class="{'disabled' : (page == pages)}">
                 <a aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>

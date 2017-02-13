@@ -4,13 +4,16 @@ export default {
             type: Number
         },
         selectPage: {
+            type: Number,
             default: 1
         },
         size: {
+            type: Number,
             default: 5
         }
     },
     created() {
+        this.paginatorSize = (this.pages < this.size) ? this.pages : this.size;
         this.page = this.selectPage;
         this.changePage()
     },
@@ -37,7 +40,8 @@ export default {
         changePage: function() {
             var middle = Math.ceil(this.size / 2);
             var start = (this.page - middle > 0) ? (this.page - middle) + 1 : 1;
-            this.start = ((start + this.size) > this.pages) ? (this.pages - this.size) + 1 : start;
+            start = ((start + this.size) > this.pages) ? (this.pages - this.size) + 1 : start;
+            this.start = (start > 0) ? start : 1;
 
             this.$emit('page-change', this.page);
         }
@@ -51,7 +55,8 @@ export default {
     data() {
         return {
             page: 1,
-            start: 1 // The start of the paginator
+            start: 1, // The start of the paginator
+            paginatorSize: 0
         }
     }
 }

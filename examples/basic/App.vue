@@ -2,13 +2,13 @@
     <div>
         <h2>Page {{page}}</h2>
 
-        <paginator :pages="10" :select-page="page" :show-first="3" @page-change="setPage" classes="paginator"></paginator>
+        <paginator :pages="10" :select-page="page" @page-change="setPage"></paginator>
     </div>
+
 </template>
 
 <script type="text/javascript">
-
-import Paginator from '../../src/index'
+import {BasicPaginator as Paginator} from '../../src/index'
 
 export default {
     components: {
@@ -21,13 +21,8 @@ export default {
     },
     data() {
         return {
-            page: 1,
-            pageData: []
+            page: 1
         }
     }
 }
-</script>
-
-<script>
-  
 </script>
