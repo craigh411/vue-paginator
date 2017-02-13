@@ -4,11 +4,18 @@ A decoupled pagination component to correctly handle pagination events.
 
 **Features:**
 
-- A native paginator that requires no further libraries.
-- A paginator for [bootstrap](http://getbootstrap.com).
-- A paginator for [semantic-ui](http://semantic-ui.com).
-- No reliance on jQuery.
+- Simply specify number of pages and length of display and `vue-paginator` will correctly calculate display.
+- Sets current page in the center of the paginator to allow easy navigation backwards and forwards.
+- Returns current page as an event, allowing you to implement your own pagination.
+- Includes implementations for `Bootstrap`, `Semantic-ui` plus two native implementations.
+- Includes mixin to allow you to easily create your own paginator.
 
+###Examples:
+
+- Native: https://jsfiddle.net/64bo4582/
+- Bootstrap: https://jsfiddle.net/dg0vLswo/
+- Semantic-UI: https://jsfiddle.net/gx06f1t9/
+- Editable: https://jsfiddle.net/d0bn62n3/
 
 ### About
 
